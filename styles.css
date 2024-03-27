@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #4B0082; /* Dark Purple */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon {
+    margin-bottom: 20px;
+}
+
+.chat-area {
+    flex-grow: 1;
+    background-color: #E6E6FA; /* Light Purple */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.sender {
+    font-weight: bold;
+    color: #808080; /* Gray */
+}
+
+.content {
+    background-color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.typing-indicator {
+    color: #808080; /* Gray */
+}
+
+.minimized {
+    display: none;
+}
+
+.input-area {
+    background-color: #4B0082; /* Dark Purple */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #800080; /* Purple */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #9932CC; /* Darker Purple */
+}
+
+/* Add your existing CSS styles here */
+
+/* Hide elements in mobile view */
+@media only screen and (max-width: 600px) {
+    .sidebar, .header .sender-img {
+        display: none;
+    }
+}
+
+/* Existing CSS Styles */
+.message.animated {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Your existing CSS styles */
+
+/* Additional styles */
+
+.message-container {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.message-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Your existing CSS styles */
+
+.typing-animation {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #808080; /* Gray */
+    animation: typing 1s infinite alternate;
+}
+
+@keyframes typing {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}

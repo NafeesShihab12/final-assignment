@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messaging App UI</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="icon"><img src="messages_icon.png" alt="Messages"></div>
+        <div class="icon"><img src="links_icon.png" alt="Links"></div>
+        <div class="icon"><img src="photos_icon.png" alt="Photos"></div>
+    </div>
+    <div class="chat-area" id="chatArea">
+        <!-- Messages will be appended here -->
+    </div>
+    <div class="input-area">
+        <input type="text" id="messageInput" placeholder="Write your message here">
+        <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
